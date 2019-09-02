@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:1.9rem;
+    font-style:normal;
+    vertical-align: middle;
+}
+
+
+html{
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body{
+	height: 100%;
+    min-width: 300px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+}
+ul {padding: 0;margin: 0;}
+
+#container {
+    overflow: hidden;
+    padding: 5px 5px;
+}
+.calc {
+    width: 300px;
+    max-width: 600px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    height: 100%;
+    -webkit-transition: all .8s;
+    transition: all .5s;
+    overflow: hidden;
+    z-index: 0;
+    position: relative;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+.flexbox {
+    width: 100%;
+    height: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.maxCalc {
+	width: 60%;
+	height: 100%;
+}
+
+#top {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 30%;
+    /*text-shadow: 0 2px 1px rgba(0,0,0,0.2);*/
+}
+#win-tool {
+    background-color: #ccc;
+    min-height: 35px;
+    position: relative;
+    padding: 7px 8px 0 8px;
+    text-align: right;
+    width: 100%;
+    box-sizing: border-box;
+}
+#win-tool span {
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;    
+    border-radius: 50%;
+    margin-right: 3px;
+    text-align: center;
+    display: inline-block;
+    cursor: default;
+    position: absolute;
+    top: 8px;
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+#close {
+    background-color: #FC5652;
+    left: 8px;
+}
+#max {
+    background-color: #FDBC40;
+    left: 34px;
+}
+#resize {
+    /*background-color: #34C749;*/
+   font-size: 3rem;
+   left: 60px;
+   display: none !important;
+}
+#win-tool a {
+    background: hsl(0, 0%, 80%);
+    display: inline-block;
+    width: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    margin-left: .5rem;    
+}
+#win-tool a:hover,
+#win-tool a:active {
+	color: red;
+}
+
+#result {
+    min-height: 90px;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #FFF;
+    overflow: auto;
+    box-sizing: border-box;
+    text-align: right;
+}
+#result #express {
+    font-size: 2rem;
+}
+#result div {
+	padding: 0 5px;
+	box-sizing: border-box;
+}
+#result #res {
+    font-size: 4.5rem;
+    font-weight: 600;
+    width: 100%;
+}
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: #919191;
+}
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+
+#bottom {
+    font-weight: 600;
+    width: 100%;
+    height: 70%;
+}
+#bottom .row {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    margin-bottom: -1px;
+}
+
+#bottom .row span{
+    height: 100%;
+    width: 25%;
+    background-color: #F2F2F2;
+    border: 1px solid #fff;
+    border-right: 0;
+    color:hsl(0, 17%, 20%);
+   	font-size: 2rem;
+   	line-height: 5rem;
+    cursor: default;
+    -webkit-user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bottom .row span.tool {
+    background-color: #F5923E;
+    color: #fff;
+}
+
+.number:hover,
+.operator:hover {
+    background: rgb(236, 156, 85) !important;
+    color: #fff;
+}
+
+/*小屏*/
+@media (max-width: 500px){
+    html {
+    	font-size: 80%;
+    	font-family:Helvetica;
+    }
+    #container {
+        height: 100%;
+        padding: 0;
+    }
+    .calc {
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        border-radius: 0;
+    }
+    #close,#max {display: none !important;}
+    #win-tool a {font-size: 1rem;line-height: 1.9rem;}
+    #resize {
+    	left: 8px;
+    	font-size: 3.5rem;
+    	line-height:1.1rem !important;
+    	box-shadow: none !important;
+    	display: inline-block !important;}
+    #bottom .row {margin: 0;}
+    #bottom .row span {
+        box-sizing: border-box;
+        border-top: 0;
+    }
+}
+@-webkit-keyframes name{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}
+@-moz-keyframes name{
+	from{}
+	to{}
+}
+@keyframes update{
+	from{transform: rotate(0deg);}
+	to{transform: rotate(360deg);}
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+		<meta name="screen-orientation" content="portrait">
+		<link rel="stylesheet" href="style.css" />
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="calc" class="calc">
+				<div id="top">
+					<div id="win-tool">
+						<span id="close" title="" data-ico="✖">&nbsp;</span>
+						<span id="max" title="" data-ico="口">&nbsp;</span>
+						<span id="resize" title="" data-ico="◎"><i class="iconfont change">&#xe612;</i></span>
+					</div>
+					<div id="result">
+						<div id="output-text">
+							<div id="history">
+								<p id="express"></p>
+							</div>
+							<div id="output">
+								<p id="res">0</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="bottom">
+					<div class="row">
+						<span class="operator" id="clear" data-number="C">CE</span>
+						<span class="operator" id="backspace" data-number="←">←</span>
+						<span class="operator" id="%">%</span>
+						<span class="operator" id="/" class="tool chu">÷</span>
+					</div>
+					<div class="row">
+						<span class="number" id="7">7</span>
+						<span class="number" id="8">8</span>
+						<span class="number" id="9">9</span>
+						<span class="operator" id="*" class="tool">×</span>
+					</div>
+					<div class="row">
+						<span class="number" id="4">4</span>
+						<span class="number" id="5">5</span>
+						<span class="number" id="6">6</span>
+						<span class="operator" id="-" class="tool">-</span>
+					</div>
+					<div class="row">
+						<span class="number" id="1">1</span>
+						<span class="number" id="2">2</span>
+						<span class="number" id="3">3</span>
+						<span class="operator add" id="+">＋</span>
+					</div>
+					<div class="row">
+						<span class="number" id="0" class="zero">0</span>
+						<span class="number" id="." class="dot">.</span>
+						<span class="empty" id="empty" data-number=""></span>
+						<span class="operator tool eq" id="=" data-number="=">＝</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+
+</html>
